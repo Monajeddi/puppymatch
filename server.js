@@ -25,7 +25,7 @@ const PORT = process.env.PORT
 
 
 //create server 
-app.listen(PORT, error =>
+app.listen(4008, error =>
     error? console.error(error)
     :
     console.log(`Server is running on port ${PORT}`)

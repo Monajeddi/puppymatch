@@ -1,6 +1,10 @@
 const express = require ('express')
 const Annonce = require('../models/Annonce')
 
+const { uploadProfil } = require('../controllers/upload.controller')
+const multer=require('multer')
+const upload=multer()
+
 const router = express.Router()
 
 //require annonce model
@@ -56,5 +60,8 @@ router.delete('/:_id', controllers.deleteAnnonce)
  */
 
  router.put('/:_id', controllers.updateAnnonce)
+
+ //********************upload Image******************* */
+router.post('/upload',upload.single('file'),uploadProfil)
 
 module.exports = router

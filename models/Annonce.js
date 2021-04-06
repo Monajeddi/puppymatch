@@ -3,6 +3,10 @@ const mongoose = require('mongoose')
 const schema = mongoose.Schema
 
 const annonceScema = new schema({
+    picture: {
+        type: String,
+        default:''
+    },
     nom: {
         type: String,
         require: true,
